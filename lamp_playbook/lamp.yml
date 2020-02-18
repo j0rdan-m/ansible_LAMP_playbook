@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+
+  remote_user: samba
+  become: yes
+  become_method: "sudo"
+
+  roles:
+      - apache2
+      - mariadb
+            
+

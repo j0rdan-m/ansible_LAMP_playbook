@@ -1,0 +1,8 @@
+lamp.yml
+
+roles/
+	apache2
+		tasks
+			lamp.yml
+		files
+			index.php	
