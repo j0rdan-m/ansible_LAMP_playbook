@@ -2,7 +2,7 @@
 
 - hosts: all
 
-  remote_user: {{ sudo user on hosts }}
+  remote_user: samba
   become: yes
   become_method: "sudo"
 
