@@ -22,6 +22,7 @@
 
 - name: Install python Mysql package #required for mysql_db tasks
   pip:
+          executable: pip3
           name: PyMySQL 
           state: latest
 
