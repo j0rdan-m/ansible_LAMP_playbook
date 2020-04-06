@@ -15,10 +15,18 @@
   apache2_module: 
           name: rewrite 
           state: present
+          
+- name: 4. change right on apache default folder
+  file:
+          path: /var/www/
+          state: directory
+          mode: '0777' 
 
 - name: 4. start Apache
   service:
           name: apache2
           state: reloaded
           enabled: yes
-
+          recurse: yes
+          owner: nobody
+          group: nogroup
