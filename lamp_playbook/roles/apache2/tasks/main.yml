@@ -21,12 +21,13 @@
           path: /var/www/
           state: directory
           mode: '0777' 
-
+          recurse: yes
+          owner: nobody
+          group: nogroup
+          
 - name: 4. start Apache
   service:
           name: apache2
           state: reloaded
           enabled: yes
-          recurse: yes
-          owner: nobody
-          group: nogroup
+
